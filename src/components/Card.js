@@ -1,12 +1,14 @@
 import React from 'react';
 
 
-const Card = ({result}) => {
+const Card = ({result, openPopUp}) => {
+
     return (
-        <section>
+        <div  onClick={() => openPopUp(result.imdbID)}>
             <img src={result.Poster} />
             <h2>{result.Title}</h2>
-        </section>
+            <p>  </p>
+        </div>
     )
 }
 export default Card;
